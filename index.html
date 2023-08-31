@@ -1,0 +1,100 @@
+<!DOCTYPE html> <!-- sirve para indicar que estamos trabajando en html5 -->
+<!-- ALT + SHIF + A crea un comentario -->
+<html lang="en"><!-- todo documento tiene una etiqueta html -->
+<!-- en este caso hay 2 nodos; head y body y de ellos pueden salir otros nodos.-->
+<head>
+    <!-- identacion; como este es un hijo del nodo va con un tab de separacion -->
+    <meta charset="UTF-8"> <!-- esta etiqueta permite caracteres especiales como ñ tildes etc -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- escala 1 es a 0 permite que los elementos se vean asi -->
+    <!-- las etiquetas meta no llevan un cierre porque no le vamos a pasar un contenido -->
+    <title>CYBERPAGE</title>
+</head>
+<body>
+    <!-- emmet es un plugin para editores de code que nos proporcionan atajos para programar de mejor manera -->
+    <h1>Encabezado principal</h1><!-- encabezado: permite 6 niveles de importancia desde el 1 al 6, entre más pequeño es el numero mas grande es el tamaño -->
+    <!-- LOS H1,H2... SON PARA ESTABLECER IMPORTANCIA DENTRO DE LA PAGINA, NO DEBEMOS USARLOS PARA DAR ESTILOS A TEXTOS. LOS MOTORES DE BUSQUEDA TOMAN ESTO EN CONSIDERACION -->
+    <h1>Encabezado 1</h1>
+    <h2>Encabezado 2</h2>
+    <h3>Encabezado 3</h3>
+    <h4>Encabezado 4</h4>
+    <br> <!-- sirve para hacer un salto de linea -->
+    <h5 style="color: blue;">Encabezado 5</h5>
+    <h6>Encabezado 6</h6>
+    <!-- CTRL + ALT + FLECHA(abajo) ó ALT + CLIC = multiplica el cursor -->
+    <hr /> <!-- sirve para hacer un cambio de tema entre parrafos, de forma visual puede ser representado como una linea horizontal, sin embargo no se deberia usar como linea horizonral -->
+    <h2>Otro tema</h2>
+    <h3>párrafos</h3>
+    <p>
+        <span style="color: blueviolet;">Lorem ipsum </span>dolor sit amet consectetur adipisicing elit. <br> Animi, harum. Explicabo commodi neque, illo, non amet accusamus corporis qui perspiciatis esse maxime rem ad tempora ea repellendus. Minima, repudiandae ullam!
+    </p>
+    <br>
+    <h2>link</h2>
+    <h3>ancla</h3>
+    <a href="http://www.google.com">google</a> <br> <!-- link que se abre en la misma pagina -->
+    <a target="_blank" href="http://www.google.com">google en ventana a parte</a> <!-- link que se abre en una pestaña nueva  --> <br>
+    <h2>Formulario</h2>
+    <form action="CyberForm" method="GET">
+        <label for="nombre">Nombre</label><br>
+        <input 
+            type="text" 
+            id="nombre" 
+            name="nombre"
+            value="malu miranda"
+            placeholder="indica tu nombre"
+            required>
+            <!-- el value en el input funciona como autorrellenado -->
+            <!-- el requier exige ser llenado antes de enviar el formulario -->
+        <br><br>
+        <label for="edad">Edad</label>
+        <br>
+        <input 
+            type="text" 
+            id="edad" 
+            name="edad"
+            placeholder="indica tu edad">
+            <br><br>
+         <label for="email">E-mail</label>
+         <br>
+         <input 
+            type="email" 
+            name="email" 
+            id="email"
+            placeholder="indica tu e-mail"> 
+        <br><br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password"
+                name="password"
+                id="password"
+                placeholder="password">
+        <br><br>
+        <label for="texto">Texto😋</label>
+        <br>
+        <textarea 
+            name="texto"
+            id="texto" 
+            cols="30" 
+            rows="10" 
+            placeholder="ingresa tu comentario">
+        </textarea> <!-- textarea permite ingresar saltos de linea en comparacion al input text -->
+        <hr>
+        <input type="submit" value="enviar info :D"> <!-- input submit interactua con el formulario, dice ENVIAR -->
+        <br><br>
+    </form>
+    <hr>
+    <h2>Imagen</h2>
+    <img src="public/imagen1.jpg" alt="imagen-1"
+    width="500">
+    <img src="public/imagen1.jpg" alt="imagen-1"
+    width="500">
+
+</body>
+</html>
+
+
+
+
+
+
+
+
