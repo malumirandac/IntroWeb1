@@ -1,0 +1,15 @@
+.myli {
+  background-color: azure;
+  color: rgb(227, 248, 241);
+}
+/* con el punto es el selector del class que creamos en etiquetas de html*/
+header {
+  color: beige;
+  background-color: brown;
+}
+/* este es todo el elemento de header */
+#article-1 {
+  color: rgb(52, 54, 54);
+  background-color: rgb(204, 210, 210);
+}
+/* este es el selector de id  */
