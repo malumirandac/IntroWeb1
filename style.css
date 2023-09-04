@@ -1,15 +1,202 @@
+/* selector global */
+* {
+  box-sizing: content-box;
+}
+
+body {
+  background-color: rgb(255, 157, 157);
+}
 .myli {
   background-color: azure;
   color: rgb(227, 248, 241);
 }
 /* con el punto es el selector del class que creamos en etiquetas de html*/
 header {
-  color: beige;
-  background-color: brown;
+  color: rgb(214, 194, 42);
+  background-color: rgb(227, 221, 135);
 }
+
+.content-content-box > div {
+  background: rgb(75, 160, 76);
+  width: 300px;
+  height: 10px;
+  margin: 30px;
+  border: 10px solid black;
+}
+
 /* este es todo el elemento de header */
 #article-1 {
-  color: rgb(52, 54, 54);
-  background-color: rgb(204, 210, 210);
+  background-color: rgb(235, 197, 197);
 }
 /* este es el selector de id  */
+
+#myp {
+  color: blueviolet;
+}
+.myp {
+  font-size: 24px;
+}
+.back {
+  background-color: beige;
+}
+.color-rojo {
+  color: brown;
+}
+.back-azul {
+  background-color: blue;
+}
+
+.div-embebido {
+  background-color: rgb(190, 116, 212);
+}
+
+/* MODELO DE CAJA - DIV */
+.contenedor {
+  margin: 50px;
+  /* espacio entre el ... */
+  background-color: brown;
+  padding: 10px;
+  /* espacio entre el borde y el contenido */
+  border: 5px solid red;
+  /* borde  */
+  color: green;
+}
+.contenido {
+  /*margin: 100px;*/
+  background-color: rgb(164, 106, 106);
+}
+
+.contenedor-con-imagen {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  background-color: aqua;
+  background-image: url("/public/imagen1.jpg");
+  background-size: cover;
+  background-position: center;
+  /* para insertar una imagen dentro del background */
+  text-align: center;
+}
+
+.contenido-con-imagen {
+  background-color: rgb(199, 193, 193);
+}
+/* selectores */
+
+/* selector por elemento */
+span {
+  font-weight: bold;
+}
+/* se asignan los mismos estilos a elementos con nombres diferentes
+en este caso, la regla afecta a todos los elementos p y span  */
+p,
+span {
+  color: rgb(176, 103, 7);
+}
+/* afecta solo a los elementos p que se encuentran dentro de main, ya sea contenido directo o indirecto */
+main p {
+  background-color: rgb(112, 41, 41);
+}
+
+/* en este caso no funciona */
+main > p {
+  font-size: 25px;
+}
+/* se usa > para referenciar a un elemento que es hijo directo */
+article > .contenedor-parrafo > p {
+  font-size: 35px;
+}
+
+/* este selector hace referencia a elementos que están precedidos por otros elementos; ambos deben estar al mismo nivel */
+h1 + p {
+  color: red;
+}
+
+/* Estilos más usados */
+/* declara el tipo de letra que se usa para mostrar en un texto, Se pueden declarar múltiples valores separados popr coma para ofrecer al navegador varias alternativas en casi que alguna no se encuentre disponible */
+.container {
+  border-top: 1px solid rgb(220, 102, 102);
+  padding: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  /* acá le ofrecemos alternativas de fuentes */
+}
+
+.container > .content > p {
+  background-color: rgb(158, 123, 188);
+  color: black;
+  font-size: 25px;
+  /* determina el tamaño de la fuente; puede estar en pixeles px, puntos pt, porcentaje %, rem proporcion al archivo */
+  font-weight: 100;
+  /* puedo usar bold (negrita) o valores desde el 100 al 1000 */
+  font-style: oblique;
+  /* normal, italic, oblique */
+}
+.content > h3 {
+  background-color: antiquewhite;
+  font: bold 30px Arial, sans-serif;
+  /* permite declarar varios atributos al mismo tiempo, separador por espacios, primero el grosor, luego tamaño, luego tipo de fuente */
+  text-align: center;
+  line-height: 30px;
+  /* define el espacio entre lineas */
+  color: rgb(146, 52, 52);
+}
+
+.mydiv {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: rgb(219, 224, 148);
+  text-align: center;
+  background-image: url("/public/450_1000.jpeg");
+}
+
+.div-in-mydiv {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  background-color: rgba(225, 225, 225, 10);
+}
+
+.div-in-mydiv-2 {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  background-color: #d6a2d4;
+}
+
+/* tamaños */
+.div-in-mydiv-3 {
+  height: 50px;
+  width: 50px;
+  /*margin-top: 20px;
+  /* para que el margen sea desde arriba */
+  margin: 20px 0;
+  border: 1px solid black;
+  background-color: #a3d397;
+}
+
+.tamano {
+  margin: 100px 20px;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+.content {
+  height: 400px;
+  width: 200px;
+}
+
+.tamano-hijo {
+  height: 25%;
+  width: 25%;
+  /* estos porcentajes son el relacion al elemento que lo contiene */
+  background-color: rgb(255, 255, 255);
+}
+
+.div-vh-vw {
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+}

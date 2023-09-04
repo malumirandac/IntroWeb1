@@ -3,7 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Introducción a CSS 🎨</title>
+    <!-- estilos con archivos externos -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- estilos embebidos -->
+    <style>
+      div-embebido {
+        background-color: aqua;
+      }
+    </style>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Introcucción a HTML</a>
+          </li>
+          <li>
+            <a href="estructura.html">Estructura de un documento HTML</a>
+          </li>
+          <li>
+            <a href="introcss.html">Introducción a CSS</a>
+          </li>
+          <li>
+            <a href="introjs.html">Introducción a JS</a>
+          </li>
+          <li>
+            <a href="introdom.html">Introducción al DOM</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <!-- content box -->
+        <article class="content-content-box">
+          <div>Content box</div>
+        </article>
+        <p>holi</p>
+        <p class="myp back">Holi :p</p>
+        <p class="myp">Holi :p</p>
+        <p id="myp" class="myp">Holi :p</p>
+        <p class="myp color-rojo back-azul">párrafo feo con dos clases</p>
+      </section>
+      <section>
+        <section>
+          <article>
+            <!-- estilo en linea -->
+            <div class="div-embebido">jola</div>
+          </article>
+          <!-- ejemplo de modelo de cajas -->
+          <article>
+            <div class="contenedor">
+              <div class="contenido">holahola</div>
+            </div>
+          </article>
+          <!-- ejemplo modelo caja con imagen -->
+          <article>
+            <div class="contenedor-con-imagen">
+              <div class="contenido-con-imagen">
+                Animales en su <span>hábitat</span>
+              </div>
+            </div>
+          </article>
+          <!-- selectores -->
+          <article class="content-contenedor-parrafo">
+            <div class="contenedor-parrafo">
+              <h1>este es el titulo del parrafo</h1>
+              <p>Este es un <span>párrafo</span></p>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section>
+        <h2>Estilos más usados</h2>
+
+        <article>
+          <div class="container">
+            <div class="content">
+              <p>Párrafo</p>
+              <h3>Este es un detalle</h3>
+              <div class="mydiv">
+                <div class="div-in-mydiv"></div>
+                <div class="div-in-mydiv-2"></div>
+                <div class="div-in-mydiv-3"></div>
+              </div>
+              <div class="tamano">
+                <div class="tamano-hijo">sss</div>
+              </div>
+              <div class="tamano-hijo"><div class="tamano-hijo">sss</div></div>
+              <div class="div-vh-vw">texto</div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
