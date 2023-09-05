@@ -2,6 +2,11 @@
 * {
   box-sizing: content-box;
 }
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
 
 body {
   background-color: rgb(255, 157, 157);
@@ -17,16 +22,16 @@ header {
 }
 
 .content-content-box > div {
-  background: rgb(75, 160, 76);
+  background: rgb(214, 194, 75);
   width: 300px;
-  height: 10px;
+  height: 30px;
   margin: 30px;
-  border: 10px solid black;
+  border: 5px solid rgb(137, 28, 28);
 }
 
 /* este es todo el elemento de header */
 #article-1 {
-  background-color: rgb(235, 197, 197);
+  background-color: rgb(235, 194, 42);
 }
 /* este es el selector de id  */
 
@@ -39,16 +44,16 @@ header {
 .back {
   background-color: beige;
 }
-.color-rojo {
+.color-rojo-back-azul {
   color: brown;
-}
-.back-azul {
   background-color: blue;
 }
 
+/*
 .div-embebido {
   background-color: rgb(190, 116, 212);
 }
+*/
 
 /* MODELO DE CAJA - DIV */
 .contenedor {
@@ -91,19 +96,15 @@ span {
 en este caso, la regla afecta a todos los elementos p y span  */
 p,
 span {
-  color: rgb(176, 103, 7);
+  color: rgb(135, 104, 172);
 }
 /* afecta solo a los elementos p que se encuentran dentro de main, ya sea contenido directo o indirecto */
 main p {
   background-color: rgb(112, 41, 41);
 }
 
-/* en este caso no funciona */
-main > p {
-  font-size: 25px;
-}
 /* se usa > para referenciar a un elemento que es hijo directo */
-article > .contenedor-parrafo > p {
+.contenedor-parrafo > p {
   font-size: 35px;
 }
 
@@ -118,6 +119,7 @@ h1 + p {
   border-top: 1px solid rgb(220, 102, 102);
   padding: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
   /* acá le ofrecemos alternativas de fuentes */
 }
 
@@ -166,6 +168,7 @@ h1 + p {
 }
 
 /* tamaños */
+
 .div-in-mydiv-3 {
   height: 50px;
   width: 50px;
@@ -175,7 +178,6 @@ h1 + p {
   border: 1px solid black;
   background-color: #a3d397;
 }
-
 .tamano {
   margin: 100px 20px;
   height: 200px;
@@ -184,8 +186,9 @@ h1 + p {
 }
 
 .content {
-  height: 400px;
-  width: 200px;
+  /*height: 400px;
+  width: 200px;*/
+  font-size: 30px;
 }
 
 .tamano-hijo {
@@ -197,6 +200,125 @@ h1 + p {
 
 .div-vh-vw {
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - 40px);
+  background-color: rgb(79, 79, 123);
+}
+.punto {
+  height: 100pt;
+  width: 100pt;
+  background-color: rgb(183, 67, 67);
+}
+.div-rem {
+  height: 20rem;
+  /* en relacion a la fuente de todo el html */
+  width: 20rem;
+  background-color: rgb(98, 207, 98);
+}
+.div-em {
+  height: 20em;
+  width: 20em;
+  background-color: rgb(83, 203, 212);
+}
+._contenedor {
+  background-color: red;
+  width: 500px;
+  height: 500px;
+}
+._contenido {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  max-height: 200px;
+  /* maximo de alto */
+  max-width: 200px;
+  /* maximo de ancho */
+  overflow-x: auto;
+  /* puede ser auto, scroll, hidden */
+  overflow-y: hidden;
+}
+._otrocontenido {
   background-color: blue;
+  width: 150px;
+  height: 150px;
+}
+.contenido-grande {
+  height: 400 px;
+  width: 400px;
+  background-color: chocolate;
+}
+.contenedor-de-bordes > div {
+  height: 100px;
+  width: 100px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: #9e1717;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.borde-1 {
+  border-style: dashed !important;
+}
+.borde-2 {
+  border-style: double !important;
+}
+.borde-3 {
+  border-style: outset !important;
+}
+.borde-4 {
+  border-style: solid !important;
+}
+.borde-en-una-linea {
+  border: 10px solid rgb(179, 37, 167);
+  /* 1. tamaño de linea (border-with) 2. estilo de borde 3. color */
+  border-radius: 60px;
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+}
+
+.flex-container {
+  display: flex;
+  /* flex-direction: row; column; reverse, column-reverse, row-reverse */
+  /*flex-direction: column-reverse;*/
+  flex-wrap: wrap;
+  /* wrap: se ajusta al tamaño de la pantalla.
+  no wrap: se ajusta al ancho de la pantalla
+  wrap reverse: lo mismo de wrap pero con los items ordenados al revez 
+  flex-flow: row wrap;
+  justify-content: end;*/
+  /* combinacion de flex-direction con flex-wrap */
+  align-content: space-between;
+  font-size: 30px;
+  border: 1px solid rgb(174, 255, 0);
+  padding: 10px;
+}
+/* no se ve */
+
+.flex-container > div {
+  /*margin: 10px;*/
+  background-color: #d8f186;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 70px;
+  /* distancia que ocupa cada componente en cada salto de linea */
+  height: 70px;
+}
+
+.contenedor-perfecto {
+  display: flex;
+  background-color: #ddd;
+  height: 40vh;
+  width: 40vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-perfecto {
+  display: flex;
+  background-color: #00ff00;
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
 }
