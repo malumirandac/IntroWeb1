@@ -295,7 +295,7 @@ h1 + p {
 /* no se ve */
 
 .flex-container > div {
-  /*margin: 10px;*/
+  margin: 10px;
   background-color: #d8f186;
   padding: 20px;
   width: 100px;
@@ -307,7 +307,7 @@ h1 + p {
 
 .contenedor-perfecto {
   display: flex;
-  background-color: #ddd;
+  background-color: #c76fc5;
   height: 40vh;
   width: 40vw;
   justify-content: center;
@@ -316,9 +316,77 @@ h1 + p {
 
 .contenido-perfecto {
   display: flex;
-  background-color: #00ff00;
+  background-color: #88ce88;
   height: 100px;
   width: 100px;
   align-items: center;
   justify-content: center;
+}
+
+/* SELECTOR HIJO */
+
+.flex-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: stretch;
+}
+
+.flex-container-2 > div {
+  background-color: #007fff;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+}
+
+.flex-container-2 > div:nth-child(1) {
+  order: 3;
+  /* establece el orden de los elementos */
+  flex-grow: 1;
+  background-color: rgb(142, 64, 64);
+}
+
+.flex-container-2 > div:nth-child(2) {
+  order: 1;
+  flex-grow: 5;
+  background-color: rgb(93, 93, 138);
+}
+
+.flex-container-2 > div:nth-child(3) {
+  order: 2;
+  flex-grow: 5;
+  background-color: rgb(135, 96, 172);
+}
+
+/* FLEX - SHRINK */
+/* determina cuanto se puede encoger un elemento en relacion a los demas dentro de un contenedor flex */
+
+.flex-container-3 {
+  display: flex;
+  align-items: stretch;
+  background-color: #ddd;
+}
+
+.flex-container-3 > div {
+  background-color: #88ce88;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 30px;
+  padding: 20px;
+  width: 100px;
+}
+
+.flex-container-3 > div:nth-child(2) {
+  flex-shrink: 6;
+}
+
+.flex-container-3 > div:nth-child(3) {
+  flex-basis: 200px;
 }
