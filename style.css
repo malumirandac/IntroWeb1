@@ -390,3 +390,97 @@ h1 + p {
 .flex-container-3 > div:nth-child(3) {
   flex-basis: 200px;
 }
+
+/* GRID */
+
+.container-grid {
+  display: grid;
+  /*grid-template-columns: 5fr 1fr 1fr;*/
+  /* indica la proporcion que tendrá cada elemento */
+  /* grid-template-columns: 2fr 400px 1fr 1fr; */
+  /* si no incluyo más indicadores de cada espacio por cada item se agregará a la fila y no a la columna*/
+}
+.item {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border: 3px solid #1843c3;
+}
+
+.grid-columns {
+  /* grid-template-columns: 2fr 400px 1fr; */
+  grid-template-columns: repeat(4, 1fr);
+  /* acá repite 1fr 1fr 1fr */
+}
+
+.grid-rows {
+  grid-template-rows: 1fr 50% 1fr;
+}
+
+.grid-rows-columns {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+/* no funciona */
+
+.primero {
+  grid-column-start: 1;
+  /* desde donde comienza */
+  grid-column-end: 3;
+  /* no es que ocupe el espacio 3 sino que se detiene en el 3, usando el 2 */
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.estructura {
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    "_header _header"
+    "_sidebar _main"
+    "_footer _footer";
+  grid-template-rows: 50px 1fr 80px;
+  grid-template-columns: 300px 1fr;
+}
+
+._header {
+  grid-area: _header;
+  background-color: #d8f186;
+  color: rgb(81, 39, 143);
+}
+
+._sidebar {
+  grid-area: _sidebar;
+  background-color: #c76fc5;
+  color: rgb(81, 39, 143);
+}
+
+._main {
+  grid-area: _main;
+  background-color: #d6a2d4;
+  color: rgb(81, 39, 143);
+}
+._footer {
+  grid-area: _footer;
+  background-color: #a3d397;
+  color: rgb(81, 39, 143);
+}
+
+.responsive {
+  display: grid;
+  /* grid-template-columns: minmax(100px, 200px) 1fr 1fr; */
+  grid-template-columns: repeat(3, minmax(100px, 200px));
+  /*  quiero que el elemento como minimo tenga 100px y como maximo 200px */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-rows: repeat(1, minmax(100px, 200px));
+  border: 3px solid #d8f186;
+  padding: 15px;
+  gap: 15px;
+}
+
+.responsive > div {
+  background-color: #d8f186;
+  color: rgb(81, 39, 143);
+  padding: 30px;
+}
